@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 효과</title>
+    <style>
+        *{ margin: 0; padding: 0;}
+        #warp {position: relative;}
+        #rec {background-color: yellow; width: 100px; height: 100px;
+              line-height: 100px; text-align: center;
+              animation-name: anil;
+              animation-duration: 2s;
+              animation-timing-function: infinite;
+            }
+            /* 애니메이션 정의*/
+            @keyframes anil{ from { width: 100px;}
+                            to {width: 500px;}
+                            }
+            @keyframes ani2{ 
+                from  {left:0px; top:110px; transform: rotate(0deg);}
+                to {left: 500px; top: 610px; transform: rotate(360deg);}
+            }
+            #cir{background-color: pink; width: 100px; height: 100px;
+                position: absolute; left: 0; top: 110px; line-height: 100px;
+                text-align: center; border-radius: 100px;
+                animation: ani2;
+                animation-duration: 2s;
+                animation-timing-function: infinite;
+            }
+    </style>
+</head>
+<body>
+    <h3>애니메이션 효과1</h3>
+    <hr>
+    <div id="wrap"></div>
+    <div id="rec">rec</div>
+    <div id="cir">cir</div>
+
+</body>
+</html>
