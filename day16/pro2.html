@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project apple</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <style>
+        .fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .slider {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .slider img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var navOffset = $("nav").offset().top;
+
+            $(window).scroll(function() {
+                var scrollPos = $(window).scrollTop();
+
+                if (scrollPos >= navOffset) {
+                    $("nav").addClass("fixed");
+                } else {
+                    $("nav").removeClass("fixed");
+                }
+            });
+
+            $('.slider').slick({
+                dots: true,
+                autoplay: true,
+                autoplaySpeed: 3000
+            });
+        });
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="logo"><i class=""></i></div>
+      <!-- <div class="logo"><i class="fab fa-apple"></i></div>-->
+        <ul class="menu">
+            <li><a href="">스토어</a></li>
+            <li><a href="">Mac</a></li>
+            <li><a href="">iPad</a></li>
+            <li><a href="">iPhone</a></li>
+            <li><a href="">Watch</a></li>
+            <li><a href="">Airpods</a></li>
+            <li><a href="">고객지원</a></li>
+        </ul>
+        <ul class="icons">
+            <li><a href=""><i class="fas fa-search"></i></a></li>
+            <li><a href=""><i class="fas fa-shopping-bag"></i></a></li>
+        </ul>
+        <a href="" class="hamburg"><i class="fas fa-bars"></i></a>
+    </nav>
+
+    <div class="slider">
+        <div><img src="image.png" alt="Slide 1"></div>
+        <div><img src="banana.jpg" alt="Slide 2"></div>
+        <div><img src="mango.jpg" alt="Slide 3"></div>
+    </div>
+</body>
+</html>

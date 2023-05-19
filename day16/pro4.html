@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SimpleShop</title>
+    <meta charset="utf-8" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-width: 992px;
+            font-family: "Helvetica";
+        }
+
+  .navbar {
+    height: 60px;
+    padding: 25px 30px 0;
+  }
+
+        .logo{
+            line-height: 60px;
+            float: left;
+        }
+
+        .logo img{
+            vertical-align: middle;
+        }
+
+        .navbar ul{
+            float: right;
+        }
+
+        .navbar li {
+    list-style-type: none;
+    float: left;
+    margin-right: 30px;
+  }
+
+  .navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 16px; /* 크기 조정 */
+    line-height: 24px; /* 줄 간격 조정 */
+  }
+/* 
+        .hero_header{
+            height: 450px;
+            width: 100%;
+        } */
+
+        body h1{
+            text-align: center;
+            margin-top: 60px;
+            margin-bottom: 60px;
+            font-size: 24px;
+            font-style: bold;
+            color: #545454;
+        }
+
+        .products {
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0;
+            width: 740px;
+            text-align: center;
+        }
+
+        .products img{
+            width: 225px;
+            height: 225px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+
+        .products a{
+            text-decoration: none;
+            color: black;
+            float: left;
+            font-size: 16px;
+        }
+
+        .price{
+            margin-top: 4px;
+            margin-bottom: 80px;
+        }
+
+        .clearfix{
+            clear: both;
+        }
+
+        .h1 {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #545454;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+ .footer {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-top: 1px solid #ddd;
+  font-size: 14px; /* 원하는 크기로 조정하세요 */
+} 
+/* .footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  margin-bottom: 40px;
+  font-size: 14px;
+} */
+
+
+        .footer img{
+            margin-top: 40px;
+            height: 20px;
+            margin-bottom: 80px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        /* Slider Styles */
+
+ .slider {
+  width: 100%;
+}
+
+.slider div {
+  width: 100%;
+}
+
+.slider img {
+  width: 100vw;
+  height: auto;
+}
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.slider').slick({
+                dots: true,
+                autoplay: true,
+                autoplaySpeed: 3000
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="navbar">
+    <a class="logo" href="#">
+        <img src="simple.png" height="40px">
+    </a>
+    <ul>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Cart</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+    <div class="slider">
+      <div><img src="food.jpg" alt="Slide 1"></div>
+      <div><img src="food2.jpg" alt="Slide 2"></div>
+      <div><img src="food3.jpg" alt="Slide 3"></div>
+  </div>
+    <!-- <img class="hero_header" src="banana.jpg"> -->
+    <h1>이번 주 신상품</h1>
+    <div class="products">
+      <a href="#">
+        <img src="images/sunglasses.jpg">
+        <p>가가가</p>
+        <p class="price">49,000</p>
+      </a>
+      <a href="#">
+        <img src="images/tassel_loafer.jpg">
+        <p>나나나</p>
+        <p class="price">89,000</p>
+      </a>
+      <a href="#">
+        <img src="images/beige_bag.jpg">
+        <p>다다다</p>
+        <p class="price">69,000</p>
+      </a>
+      <a href="#">
+        <img src="images/sneakers.jpg">
+        <p>라라라</p>
+        <p class="price">79,000</p>
+      </a>
+      <a href="#">
+        <img src="images/slippers.jpg">
+        <p>마마마</p>
+        <p class="price">29,000</p>
+      </a>
+      <a href="#">
+        <img src="images/wrist_watch.jpg">
+        <p>바바바</p>
+        <p class="price">99,000</p>
+      </a>
+      <a href="#">
+        <img src="images/fedora_hat.jpg">
+        <p>사사사</p>
+        <p class="price">39,000</p>
+      </a>
+      <a href="#">
+        <img src="images/classic_loafer.jpg">
+        <p>아아아</p>
+        <p class="price">99,000</p>
+      </a>
+      <a href="#">
+        <img src="images/pink_bag.jpg">
+        <p>자자자</p>
+        <p class="price">79,000</p>
+      </a>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+        <div class="footer">
+          <p>회사명: 프레시지&nbsp;&nbsp;&nbsp;대표자: 정중교&nbsp;&nbsp;&nbsp;주소: 경기도 용인시 처인구 이동읍 삼배울로 23, 주식회사 프레시지</p>
+          <p>전화: 1833-5836&nbsp;&nbsp;&nbsp;사업자등록번호: 880-86-00259&nbsp;&nbsp;&nbsp;통신판매업신고번호: 제 2020-용인처인-0524 호</p>
+          <p>개인정보보호책임자: 장형수&nbsp;&nbsp;&nbsp;호스팅서비스사업자: (주)가비아</p>
+          <p>COPYRIGHT (c) 프레시지 ALL RIGHTS RESERVED.</p>
+      <a href="#"><img src="face.png"></a>
+      <a href="#"><img src="insta.png"></a>
+      <a href="#"><img src="kakao.png"></a>
+    </div>
+  </body>
+</html>

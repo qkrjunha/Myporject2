@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <title>Document</title>
+    <script>
+        $(document).ready(function () {
+            $('button').click(function () {
+                $.ajax({
+                    url: "https://dapi.kakao.com/v2/local/search/address.json"
+                    , headers: { "Authorization": "KakaoAK f63f9ac277fcb5439d8431c1a895899c" }
+                    , dataType: "json"
+                    , data: { 'query': $('#q').val()}
+                    , type: "GET"
+                    , success: function (res) {
+                        // 비우기
+                        $('#contents').empty();
+                        let dataset = res['documents'];
+                        if (dataset.length == 0) {
+                            $('#contents').append('<p>조회결과없음</p>');
+                        } else {
+                            for (let i in dataset) {
+                                $('#contents').append('<p><span>'
+                                    + dataset[i]['address']['address_name']
+                                    + '</span><span>' + dataset[i]['x']
+                                    + '</span><span>' + dataset[i]['y'] + '</span></p>');
+                            }
+                        }
+                        // for(let i in res) {
+                        //     console.log(res[i]);
+                        // }
+                        //console.log(res);
+
+                    }
+                    , error: function (e) {
+                        console.log(e);
+                    }
+                    , complete: function () {
+                        console.log("종료");
+                    }
+
+                })
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- <div id="target" style="width: 300px; height: 100px; border: solid 1px black;"></div> -->
+    <input type="text" id="q">
+    <button>검색</button>
+    <div id="contents" style="width: 500px; height: 500px;">
+
+
+    </div>
+</body>
+
+</html>
