@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <table class="table table-hover" id="table_id">
+                <tbody class="page-data"></tbody>
+            </table>
+                <nav>
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item page-list">
+                            <a href="#" class="page-link">&laquo;</a>
+                        </li>
+                        <li class="page-item">
+                            <a href="#" class="page-link">&raquo;</a>
+                        </li>
+                    </ul>
+                </nav>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <script>
+        // 현재 페이지
+        let currentPage = 1;
+        // 출력 함수
+        let itemPerPage = 10;
+        // 페이지 번호 수
+        let buttonPerPage = 10;
+
+        function fn_loadData(page){
+            $.get('https://api.upbit.com/v1/market/all', function(data){
+                console.log(data);
+                $('.page-data').empty();
+                let start = (page - 1) * itemPerPage;
+                let end = start + itemPerPage;
+                for(let i = start; i < end; i++){
+                    if(i>= data.length){
+                        break;
+                    }
+                    let str = '';
+                    str += '<tr><td>';
+                    str += (i * 1) + '</td>';
+                    str += '<td>' + data[i].market + '</td>';
+                    str += '<td>' + data[i].english_name + '</td>';
+                    str += '<td>' + data[i].korean_name + '</td>';
+                    str += '</tr>';
+                    $('.page-data').append(str);
+                    console.log(str);
+                }
+                let totalPages = Math.ceil(data.length / itemPerPage);
+                currentPage = page;
+                fn_pageButtons(totalPages);
+
+
+            });
+        }
+        function fn_pageButtons(totalPages){
+            $('.list-item').empty();
+            let startPage = Math.max(1, currentPage - Math.floor(buttonPerPage / 2));
+            let endPage = Math.min(totalPages, startPage + buttonPerPage - 1);
+            startPage = Math.max(1, endPage - buttonPerPage +1 );
+            let str = "";
+            for(let i = startPage ; i <= endPage; i++){
+                str += '<li onclick="fn_loadData('+i+')" class="page-item list-item" id="page_'+i+'"><a class="page-link">'+i
+                    +'</a></li>' 
+            }
+            console.log(str);
+            $('.page-list').after(str);
+            $('.list-item').removeClass('active');
+            $('#page_'+ currentPage).addClass('active');
+        }
+
+
+
+        $(document).ready(function(){
+            fn_loadData(currentPage);
+        });
+    </script>
+</body>
+</html>
