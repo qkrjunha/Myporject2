@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Santa Flex</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/icon.png" rel="icon">
+  <link href="assets/img/icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Restaurantly - v3.1.0
+  * Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+  <link href="assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <link href="assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link id="pagestyle" href="assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
+  <style>
+    body {
+      background-color: black;
+    }
+  </style>
+
+</head>
+
+<body>
+
+   <!-- ======= Top Bar ======= -->
+   <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-phone d-flex align-items-center"><span>+1 02-3486-9600</span></i>
+        <i class="bi bi-clock d-flex align-items-center ms-4"><span> Mon-Sat: 9AM - 21PM</span></i>
+      </div>
+
+      <div class="languages d-none d-md-flex align-items-center">
+        <ul>
+          <li><a href="#">En</a></li>
+          <li>Ko</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-cente" >
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+
+      <h1 class="logo me-auto me-lg-0">
+        <a href="0. index_project.html"><img src="assets/img/logo_transparency.png"> Santa Flex</a>
+      </h1>
+      <!-- Uncomment below if you fer to use an image logo -->
+      <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto" href="0. index_project.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="1. cart.html">선물담기</a></li>
+          <li><a class="nav-link scrollto" href="3-1. present.html">선물하기</a></li>
+          <li><a class="nav-link scrollto" href="4. message.html">감사메시지</a></li>
+          <li><a class="nav-link scrollto" href="5-1. login.html">로그인</a></li>
+          <li><a class="nav-link scrollto" href="6. QnA.html">Q&A</a></li>
+          <li><a class="nav-link scrollto" href="8. messenger.html">메신저</a></li>
+          <li class="dropdown"><a href="#"><span>마이페이지</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="7-1. profile.html">계정 정보</a></li>
+              <li><a href="7-2. member_modify.html">회원 정보 수정</a></li>
+              <li><a href="7-3. event_modify.html">이벤트 수정</a></li>
+              <li><a href="7-4. present_list.html">선물 내역 보기</a></li>
+            </ul>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+      <a href="2. invitation.html" class="book-a-table-btn scrollto d-none d-lg-flex" style="margin: 0px;">초대장 만들기</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= 선물 내역 페이지 Section ======= -->
+  <section id="why-us" class="why-us bg-dark">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title" style="margin-top: 100px;">
+        <h2>선물 내역 보기</h2>
+        <p>친구들과 주고 받은 선물을 한 눈에 확인하기</p>
+      </div>
+
+      <div class="row">
+        <a class="nav-link scrollto" href="#give_sent">
+        <div class="col-lg-4">
+          <div class="box" data-aos="zoom-in" data-aos-delay="100">
+            <span>01</span>
+            <h4>내가 보낸 선물</h4>
+            <p>내가 친구들한테 보낸 선물 내역을 확인해보세요. </p>
+          </div>
+        </a>
+        </div>
+
+        <div class="col-lg-4 mt-4 mt-lg-0">
+          <a class="nav-link scrollto" href="#receive_sent">
+          <div class="box" data-aos="zoom-in" data-aos-delay="200">
+            <span>02</span>
+            <h4>내가 받은 선물</h4>
+            <p>내가 친구들한테 받은 선물 내역을 확인해보세요.</p>
+          </div>
+        </a>
+        </div>
+
+        <div class="col-lg-4 mt-4 mt-lg-0">
+          <a class="nav-link scrollto" href="#friend_list">
+          <div class="box" data-aos="zoom-in" data-aos-delay="300">
+            <span>03</span>
+            <h4>선물을 주고 받은 친구 목록</h4>
+            <p>선물을 주고 받은 친구 목록을 확인해보세요.</p>
+          </div>
+        </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Why Us Section -->
+
+  <!-- 내가 보낸 선물 section -->
+  <div class="container" data-aos="fade-up" id="give_sent" style="margin-top: 100px">
+  <div class="col-12 mt-4" >
+    <div class="card mb-4">
+      <div class="section-title">
+        <p style="margin: 20px; color: black;">내가 보낸 선물</p>
+      </div>
+      <div class="card-body p-3">
+        <div class="row">
+          <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
+            <div class="card card-blog card-plain">
+              <div class="position-relative">
+                <a class="d-block shadow-xl border-radius-xl">
+                  <img src="assets/img/menu/tbb.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
+                </a>
+              </div>
+              <div class="card-body px-1 pb-0">
+                  <h5>
+                    마카롱
+                  </h5>
+                </a>
+                <div class="d-flex align-items-center justify-content-between">
+                  <button type="button" class="btn btn-outline-primary btn-sm mb-0">배송중</button>
+                  <div class="avatar-group mt-2">
+                    <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Elena Morison">
+                      <img alt="Image placeholder" src="assets/img/team-1.jpg">
+                    </a>
+                    <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ryan Milly">
+                      <img alt="Image placeholder" src="assets/img/team-2.jpg">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
+            <div class="card card-blog card-plain">
+              <div class="position-relative">
+                <a class="d-block shadow-xl border-radius-xl">
+                  <img src="assets/img/menu/odense.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
+                </a>
+              </div>
+              <div class="card-body px-1 pb-0">
+                  <h5>
+                    그릇 세트
+                  </h5>
+                </a>
+                <div class="d-flex align-items-center justify-content-between">
+                  <button type="button" class="btn btn-outline-dark btn-sm mb-0">배송완료</button>
+                  <div class="avatar-group mt-2">
+                    <!-- <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Nick Daniel">
+                      <img alt="Image placeholder" src="assets/img/team-3.jpg">
+                    </a> -->
+                    <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Peterson">
+                      <img alt="Image placeholder" src="assets/img/team-4.jpg">
+                    </a>
+                    <!-- <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Elena Morison">
+                      <img alt="Image placeholder" src="assets/img/team-1.jpg">
+                    </a>
+                    <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ryan Milly">
+                      <img alt="Image placeholder" src="assets/img/team-2.jpg">
+                    </a> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
+            <div class="card card-blog card-plain">
+              <div class="position-relative">
+                <a class="d-block shadow-xl border-radius-xl">
+                  <img src="assets/img/menu/mille.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
+                </a>
+              </div>
+              <div class="card-body px-1 pb-0">
+                  <h5>
+                    식기 세척기
+                  </h5>
+                </a>
+                <div class="d-flex align-items-center justify-content-between">
+                  <button type="button" class="btn btn-outline-dark btn-sm mb-0">배송완료</button>
+                  <div class="avatar-group mt-2">
+                    <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Peterson">
+                      <img alt="Image placeholder" src="assets/img/team-4.jpg">
+                    </a>
+                    <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Nick Daniel">
+                      <img alt="Image placeholder" src="assets/img/team-3.jpg">
+                    </a>
+                    <!-- <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ryan Milly">
+                      <img alt="Image placeholder" src="assets/img/team-2.jpg">
+                    </a>
+                    <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Elena Morison">
+                      <img alt="Image placeholder" src="assets/img/team-1.jpg">
+                    </a> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div><!-- end 내가 보낸 선물 section -->
+
+
+
+  <!-- 내가 받은 선물 section -->
+  <div class="container" data-aos="fade-up" id="receive_sent" style="margin-top: 100px">
+    <div class="col-12 mt-4">
+      <div class="card mb-4">
+        <div class="section-title">
+          <p style="margin: 20px; color: black;">내가 받은 선물</p>
+        </div>
+        <div class="card-body p-3">
+          <div class="row">
+            <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
+              <div class="card card-blog card-plain">
+                <div class="position-relative">
+                  <a class="d-block shadow-xl border-radius-xl">
+                    <img src="assets/img/menu/airfrier.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
+                  </a>
+                </div>
+                <div class="card-body px-1 pb-0">
+                    <h5>
+                      에어프라이어
+                    </h5>
+                  </a>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <button type="button" class="btn btn-outline-primary btn-sm mb-0">배송중</button>
+                    <div class="avatar-group mt-2">
+                      <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Elena Morison">
+                        <img alt="Image placeholder" src="assets/img/team-1.jpg">
+                      </a>
+                      <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ryan Milly">
+                        <img alt="Image placeholder" src="assets/img/team-2.jpg">
+                      </a>
+                      <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Nick Daniel">
+                        <img alt="Image placeholder" src="assets/img/team-3.jpg">
+                      </a>
+                      <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Peterson">
+                        <img alt="Image placeholder" src="assets/img/team-4.jpg">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
+              <div class="card card-blog card-plain">
+                <div class="position-relative">
+                  <a class="d-block shadow-xl border-radius-xl">
+                    <img src="assets/img/menu/loboten.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
+                  </a>
+                </div>
+                <div class="card-body px-1 pb-0">
+                    <h5>
+                      탁자
+                    </h5>
+                  </a>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <button type="button" class="btn btn-outline-primary btn-sm mb-0">배송중</button>
+                    <div class="avatar-group mt-2">
+                      <!-- <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Nick Daniel">
+                        <img alt="Image placeholder" src="assets/img/team-3.jpg">
+                      </a> -->
+                      <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Peterson">
+                        <img alt="Image placeholder" src="assets/img/team-4.jpg">
+                      </a>
+                      <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Elena Morison">
+                        <img alt="Image placeholder" src="assets/img/team-1.jpg">
+                      </a>
+                      <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ryan Milly">
+                        <img alt="Image placeholder" src="assets/img/team-2.jpg">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-6 mb-xl-0 mb-4">
+              <div class="card card-blog card-plain">
+                <div class="position-relative">
+                  <a class="d-block shadow-xl border-radius-xl">
+                    <img src="assets/img/menu/cake.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
+                  </a>
+                </div>
+                <div class="card-body px-1 pb-0">
+                    <h5>
+                      수저 세트
+                    </h5>
+                  </a>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <button type="button" class="btn btn-outline-dark btn-sm mb-0">배송완료</button>
+                    <div class="avatar-group mt-2">
+                      <!-- <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Peterson">
+                        <img alt="Image placeholder" src="assets/img/team-4.jpg">
+                      </a>
+                      <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Nick Daniel">
+                        <img alt="Image placeholder" src="assets/img/team-3.jpg">
+                      </a> -->
+                      <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ryan Milly">
+                        <img alt="Image placeholder" src="assets/img/team-2.jpg">
+                      </a>
+                      <!-- <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Elena Morison">
+                        <img alt="Image placeholder" src="assets/img/team-1.jpg">
+                      </a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div><!-- end 내가 받은 선물 section -->
+
+
+
+
+<!-- 선물을 주고 받은 친구 목록 section -->
+<div class="container" data-aos="fade-up" id="friend_list" style="margin-top: 100px">
+  <div class="col-12 mt-4" >
+    <div class="card mb-4">
+      <div class="section-title">
+        <p style="margin: 20px; color: black;">선물을 주고 받은 친구 목록</p>
+      </div>
+
+      <div class="card card-body border-light shadow-sm table-wrapper table-responsive pt-0" style="background-color: rgba(250, 250, 250, 0.9);">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th style="text-align:center;">번호</th>
+                    <th>성함</th>						
+                    <th>날짜</th>
+                    <th>선물 목록</th>
+                    <th>금액</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Item -->
+                <tr>
+                    <td style="text-align:center;">1</td>
+                    <td>
+                      <div class="avatar me-3">
+                        <img src="assets/img/people/kk.png" alt="" class="border-radius-lg shadow chat-img">
+                        <p style="color: gray; margin: 30px;">결</p>
+                      </div>
+                    </td>
+                    <td>2021년 8월 25일</td>                        
+                    <td>수저 세트</td>
+                    <td>30,000원</td>
+                </tr>
+                <!-- Item -->
+                <tr>
+                  <td style="text-align:center;">2</td>
+                  <td>
+                    <div class="avatar me-3">
+                      <img src="assets/img/people/hj.png" alt="" class="border-radius-lg shadow chat-img">
+                      <p style="color: gray; margin: 30px;">혜지</p>
+                    </div>
+                  </td>
+                  <td>2021년 8월 29일</td>                        
+                  <td>탁자</td>
+                  <td>25,000원</td>
+              </tr>
+                <!-- Item -->
+                <tr>
+                  <td style="text-align:center;">3</td>
+                  <td>
+                    <div class="avatar me-3">
+                      <img src="assets/img/people/hy.png" alt="" class="border-radius-lg shadow chat-img">
+                      <p style="color: gray; margin: 30px;">하윤</p>
+                    </div>
+                  </td>
+                  <td>2021년 9월 12일</td>                        
+                  <td>식기 세척기</td>
+                  <td>10,000원</td>
+              </tr>
+                <!-- Item -->
+                <tr>
+                  <td style="text-align:center;">4</td>
+                  <td>
+                    <div class="avatar me-3">
+                      <img src="assets/img/people/cw.png" alt="" class="border-radius-lg shadow chat-img">
+                      <p style="color: gray; margin: 30px;">철우</p>
+                    </div>
+                  </td>
+                  <td>2021년 9월 19일</td>                        
+                  <td>그릇 세트</td>
+                  <td>20,000원</td>
+              </tr>
+                <!-- Item -->
+                <tr>
+                  <td style="text-align:center;">5</td>
+                  <td>
+                    <div class="avatar me-3">
+                      <img src="assets/img/people/dl.png" alt="" class="border-radius-lg shadow chat-img">
+                      <p style="color: gray; margin: 30px;">둘리</p>
+                    </div>
+                  </td>
+                  <td>2021년 9월 30일</td>                        
+                  <td>마카롱</td>
+                  <td>7,000원</td>
+              </tr>       
+            </tbody>
+        </table>
+
+
+        <div class="card-footer px-3 border-0 d-flex align-items-center justify-content-center"> 
+            <nav aria-label="Page navigation example">
+                <ul class="pagination mb-0">
+                    <li class="page-item">
+                        <a class="page-link" href="#">Pre</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item active">
+                        <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">4</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">5</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
+      
+  
+<!-- ======= Footer ======= -->
+<footer id="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-1 col-md-6">
+          <div class="footer-info" float="right">  
+            </div>
+          </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-info">
+              <h3>Santa Flex</h3>
+              <p>서울특별시 강남구 역삼동 819-3, KOREA<br></p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info" float="right">
+                <p>
+                  <strong>Phone:</strong> +82 010 1234 5678<br>
+                  <strong>Email:</strong> santaflex@google.co.kr<br>
+                </p>
+              </div>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="github"><i class="bx bxl-github"></i></a>
+                <!-- <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
+              </div>
+            </div>
+
+        <div class="col-md-auto footer-links">
+          <ul>
+             <div class="logo">
+               <a href="0. index_project.html">
+                 <p><img src="assets/img/logo_transparency.png" width = "50px" height= "50px" alt=""><span style="font-size: 30px"><sub>&nbspSantaFlex</sub></span></p>
+                </a>
+             </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright <strong><span>SantaFlex</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/restaurantly-restaurant-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">SantaFlex</a>
+    </div>
+  </div>
+</footer><!-- End Footer -->
+
+
+<div id="loader"></div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+<!--   Core JS Files   -->
+<script src="assets/js/core/popper.min.js"></script>
+<script src="assets/js/core/bootstrap.min.js"></script>
+<script src="assets/js/plugins/perfect-scrollbar.min.js"></script>
+<script src="assets/js/plugins/smooth-scrollbar.min.js"></script>
+<script>
+  var win = navigator.platform.indexOf('Win') > -1;
+  if (win && document.querySelector('#sidenav-scrollbar')) {
+    var options = {
+      damping: '0.5'
+    }
+    Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+  }
+</script>
+
+
+
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

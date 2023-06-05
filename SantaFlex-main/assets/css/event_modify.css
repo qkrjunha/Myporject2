@@ -1,0 +1,27 @@
+.btn_sujung, .btn_delete{
+    border: 1px solid bisque;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.05);
+    color:white;
+    margin: 0 5px;
+}
+.btn_sujung:hover{
+    color: rgb(248, 107, 107);
+    transition: all 0.5s;    
+}
+.btn_delete:hover{
+    color: rgb(248, 107, 107);
+    transition: all 0.5s;    
+}
+.btn_content{
+    margin-top: 6rem;
+}
+.present_info{
+    text-align: left;
+    border: 5px solid white;
+}
+.deep_pre_info>p{
+    margin: 10px;
+    border-bottom: 1px solid white;
+}
