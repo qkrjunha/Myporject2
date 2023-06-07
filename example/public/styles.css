@@ -1,0 +1,199 @@
+body {
+    background-color: #222222;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding-top: 56px;
+    padding-bottom: 120px;
+}
+
+.navbar {
+    background-color: #222222;
+}
+
+.navbar-brand {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'CustomFont', Arial, sans-serif;
+}
+
+.carousel {
+    height: 800px;
+}
+
+.carousel-item img {
+    height: 800px;
+    object-fit: cover;
+}
+
+
+.section-title {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 40px;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-family: 'CustomFont', sans-serif;
+  
+}
+
+.section-content {
+    padding: 150px 0;
+    text-align: center;
+    
+}
+
+.section-content p {
+    font-size: 29px;
+    line-height: 1.6;
+    font-family: 'CustomFont', sans-serif;
+    
+}
+
+.section-content button {
+    background-color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.section-content button:hover {
+    background-color: #cccccc;
+}
+
+footer {
+   
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    /* 푸터의 높이 */
+    background-color: #222222;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+}
+
+.footer p {
+    color: #999999;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.navbar-brand.center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar-toggler {
+    margin-left: auto;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.btn-reservation {
+    display: inline-block;
+    background-color: #ff5e3a;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-reservation:hover {
+    background-color: #ff3c1f;
+    align-items: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.carousel-image {
+    padding: 110px; /* 좌우 여백 크기를 조정하세요 */
+    height: 800px;
+}
+
+.instagram-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #e4405f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.instagram-button:hover {
+    background-color: #d6294a;
+}
+
+.instagram-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 500px; /* 버튼의 너비를 조정합니다 */
+    height: 800px; /* 버튼의 높이를 조정합니다 */
+}
+
+.weather {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.weather div {
+    margin-right: 10px;
+    font-size: 30px;
+}
+
+#daumRoughmapContainer1684134122176 {
+    text-align: center;
+}
+
+#logo {
+    font-size: 150px; /* 원하는 폰트 크기로 조정 */
+    text-align: center; /* 가운데 정렬 */
+}
+
+.image-container p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  @font-face {
+    font-family: 'CustomFont';  /* 사용자 정의 글꼴의 이름 */
+    src: url('/jugamtest/ttf/나눔손글씨\ 할아버지의나눔.ttf');  /* 글꼴 파일의 경로 */
+ 
+}
+.image-container {
+    /* Existing styles */
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  
+  .image-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }

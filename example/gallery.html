@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Meyawo landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Meyawo Landing page | Free Bootstrap 4.3.x landing page</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + Meyawo main styles -->
+    <link rel="stylesheet" href="assets/css/meyawo.css">
+    <style>
+        .pagination-container {
+            display: flex;
+            justify-content: center;
+        }
+        
+    </style>
+
+    </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page Navbar -->
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="logo" href="index.html">festival</a>         
+            <ul class="nav">
+                <li class="item">
+                    <a class="link" href="index.html">홈</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#about">갤러리</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#portfolio">자유게시판</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="login.html">로그인</a>
+                </li>
+            </ul>
+            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </a>
+        </div>          
+    </nav><!-- End of Page Navbar -->
+
+  
+    <!-- portfolio section -->
+    <section class="section" id="portfolio">
+        <div class="container text-center">
+            <h6 class="section-title mb-6">갤러리</h6>
+            <div class="row">
+            </div>
+            <div class="pagination-container">
+                <nav>
+                    <ul class="pagination">
+                    </ul>
+                </nav>
+            </div>
+        </div><!-- end of container -->
+    </section> <!-- end of portfolio section -->
+
+    <!-- footer -->
+    <div class="container">
+        <footer class="footer">       
+            <p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="http://www.devcrud.com">DevCRUD</a></p>
+            <div class="social-links text-right m-auto ml-sm-auto">
+                <a href="https://www.facebook.com" class="link"><i class="ti-facebook"></i></a>
+                <a href="https://www.instagram.com" class="link"><i class="ti-instagram"></i></a>
+                <a href="https://www.youtube.com" target="_blank" class="link"><i class="ti-youtube"></i></a>
+            </div>
+        </footer>
+    </div> <!-- end of page footer -->
+    
+    <!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Meyawo js -->
+    <script src="assets/js/meyawo.js"></script>
+
+    <script>
+        const itemsPerPage = 6;
+
+        function paginate(items, currentPage) {
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            return items.slice(startIndex, endIndex);
+        }
+
+        function displayPage(items, currentPage) {
+            const paginatedItems = paginate(items, currentPage);
+            const row = document.querySelector(".row");
+            row.innerHTML = "";
+
+            paginatedItems.forEach((item) => {
+                const div = document.createElement("div");
+                div.className = "col-md-4";
+                div.innerHTML = item;
+                row.appendChild(div);
+            });
+        }
+
+        function createPaginationButtons(items) {
+            const numberOfPages = Math.ceil(items.length / itemsPerPage);
+            const pagination = document.querySelector(".pagination");
+
+            for (let i = 1; i <= numberOfPages; i++) {
+                const li = document.createElement("li");
+                const a = document.createElement("a");
+                a.href = "#";
+                a.textContent = i;
+                a.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    displayPage(items, i);
+                });
+                li.appendChild(a);
+                pagination.appendChild(li);
+            }
+        }
+
+        const images = [
+            "<a href='#' class='portfolio-card'><img src='assets/imgs/folio-1.jpg' class='portfolio-card-img' alt='Image'><span class='portfolio-card-overlay'><span class='portfolio-card-caption'><h4>클릭시 이동</h4></span></span></a>",
+            "<a href='#' class='portfolio-card'><img src='assets/imgs/folio-1.jpg' class='portfolio-card-img' alt='Image'><span class='portfolio-card-overlay'><span class='portfolio-card-caption'><h4>클릭시 이동</h4></span></span></a>",
+            "<a href='#' class='portfolio-card'><img src='assets/imgs/folio-1.jpg' class='portfolio-card-img' alt='Image'><span class='portfolio-card-overlay'><span class='portfolio-card-caption'><h4>클릭시 이동</h4></span></span></a>",
+            "<a href='#' class='portfolio-card'><img src='assets/imgs/folio-1.jpg' class='portfolio-card-img' alt='Image'><span class='portfolio-card-overlay'><span class='portfolio-card-caption'><h4>클릭시 이동</h4></span></span></a>",
+            "<a href='#' class='portfolio-card'><img src='assets/imgs/folio-1.jpg' class='portfolio-card-img' alt='Image'><span class='portfolio-card-overlay'><span class='portfolio-card-caption'><h4>클릭시 이동</h4></span></span></a>",
+            "<a href='#' class='portfolio-card'><img src='assets/imgs/folio-1.jpg' class='portfolio-card-img' alt='Image'><span class='portfolio-card-overlay'><span class='portfolio-card-caption'><h4>클릭시 이동</h4></span></span></a>",
+            "<a href='#' class='portfolio-card'><img src='assets/imgs/folio-1.jpg' class='portfolio-card-img' alt='Image'><span class='portfolio-card-overlay'><span class='portfolio-card-caption'><h4>클릭시 이동</h4></span></span></a>",
+            "<a href='#' class='portfolio-card'><img src='assets/imgs/folio-1.jpg' class='portfolio-card-img' alt='Image'><span class='portfolio-card-overlay'><span class='portfolio-card-caption'><h4>클릭시 이동</h4></span></span></a>",
+
+            // 여기에 다른 이미지에 대한 HTML 문자열 추가
+        ];
+
+        displayPage(images, 1);
+        createPaginationButtons(images);
+    </script>
+</body>
+</html>
